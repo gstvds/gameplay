@@ -4,6 +4,7 @@ import { View, Text } from 'react-native';
 import { styles } from './styles';
 
 import { Profile } from '../../components/Profile';
+import { ButtonAdd } from '../../components/ButtonAdd';
 
 export function Home() {
   return (
@@ -11,6 +12,7 @@ export function Home() {
 
       <View style={styles.header}>
         <Profile />
+        <ButtonAdd />
       </View>
     </View>
   )
