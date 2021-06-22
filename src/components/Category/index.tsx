@@ -34,5 +34,5 @@ export function Category({ title, icon: Icon, checked = false, ...rest }: Catego
         </View>
       </LinearGradient>
     </RectButton>
-  )
+  );
 }

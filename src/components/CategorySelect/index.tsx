@@ -31,5 +31,5 @@ export function CategorySelect({ categorySelected, setCategory }: CategorySelect
         ))
       }
     </ScrollView>
-  )
+  );
 }

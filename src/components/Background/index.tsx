@@ -17,5 +17,5 @@ export function Background({ children }: BackgroundProps) {
     >
       {children}
     </LinearGradient>
-  )
+  );
 }

@@ -19,5 +19,5 @@ export function Avatar({ uri }: AvatarProps) {
     >
       <Image source={{ uri }} style={styles.avatar} />
     </LinearGradient>
-  )
+  );
 }
