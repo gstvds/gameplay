@@ -16,7 +16,7 @@ type CategoryProps = RectButtonProps & {
   checked?: boolean;
 }
 
-export function Category({ title, icon: Icon, checked = false, hasCheckbox = true, ...rest }: CategoryProps) {
+export function Category({ title, icon: Icon, checked = false, hasCheckbox = false, ...rest }: CategoryProps) {
   const { secondary40, secondary50, secondary70, secondary85 } = theme.colors;
 
   return (
