@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { View, FlatList } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import { styles } from './styles';
+import { ROUTES } from '../../utils/routes';
 
 import { Profile } from '../../components/Profile';
 import { ButtonAdd } from '../../components/ButtonAdd';
@@ -12,6 +14,7 @@ import { Divider } from '../../components/Divider';
 import { Background } from '../../components/Background';
 
 export function Home() {
+  const navigation = useNavigation();
   const [category, setCategory] = useState('');
   const appointments = [
     {
@@ -39,8 +42,13 @@ export function Home() {
       description: 'É hoje que vamos chegar ao challenge sem perder uma partida da md10',
     },
   ]
+  
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId);
+  }
+
+  function handleAppointmentDetails() {
+    navigation.navigate(ROUTES.APPOINTMENT_DETAILS);
   }
 
   return (
@@ -63,7 +71,7 @@ export function Home() {
             data={appointments}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <Appointment data={item} />
+              <Appointment data={item} onPress={handleAppointmentDetails} />
             )}
             style={styles.matches}
             showsVerticalScrollIndicator={false}
