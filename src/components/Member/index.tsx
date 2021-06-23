@@ -6,14 +6,14 @@ import { theme } from '../../global/styles/theme';
 
 import { Avatar } from '../Avatar';
 
-export interface MemberData {
+export type MemberData = {
   id: string;
   username: string;
   avatar_url: string;
   status: string;
 }
 
-interface MemberProps {
+type MemberProps = {
   data: MemberData
 }
 

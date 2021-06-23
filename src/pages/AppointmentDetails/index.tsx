@@ -14,9 +14,7 @@ import { Header } from '../../components/Header';
 import { Member } from '../../components/Member';
 import { Divider } from '../../components/Divider';
 
-interface AppointmentDetailsProps { }
-
-export function AppointmentDetails({ }: AppointmentDetailsProps) {
+export function AppointmentDetails() {
   const members = [
     {
       id: '1',

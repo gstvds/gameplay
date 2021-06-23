@@ -10,7 +10,7 @@ import type { ReactNode } from 'react';
 import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
 
-interface HeaderProps {
+type HeaderProps = {
   title: string;
   action?: ReactNode;
 }
